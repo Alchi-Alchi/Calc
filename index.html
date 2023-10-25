@@ -3,15 +3,15 @@
  <head>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="styles.css">
-  <script src="js/calc.js"></script>
   <title>Calc</title>
  </head>
  <body>
-<div class="fields">
-    <div><label>Number <input type="text"></label></div>
-    <div><label>Operation <input type="text"></label></div>
-    <div><label>Number <input type="text"></label></div>
-    <div><label>Result <span></span></label></div>
-</div>
+    <div class="fields">
+        <div><input type="text" class="numInput" id="a" placeholder="Number"></div>
+        <div><input type="text" id="operator" placeholder="Operator" maxlength="1"></div>
+        <div><input type="text" class="numInput" id="b" placeholder="Number"></div>
+        <div><span id="result"></span></div>
+    </div>
+    <script src="js/calc.js"></script>
  </body>
 </html>

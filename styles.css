@@ -8,5 +8,10 @@ body {
 }
 
 input {
+    margin: 1rem;
+    padding: 1%;
+}
 
+#result {
+    font-size: 32px;
 }
