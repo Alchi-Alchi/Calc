@@ -45,23 +45,32 @@ function assignment () {
 assignment();
 //Функция вычисления
 function operation () {
-    switch (symbol) {
-        case "+":
-        count = Number(firstNumber) + Number(secondNumber);
-        break;
-        case "-":
-        count = Number(firstNumber) - Number(secondNumber);
-        break;
-        case "*":
-        count = Number(firstNumber) * Number(secondNumber);
-        break;
-        case "/":
-        count = Number(firstNumber) / Number(secondNumber);
-        break;
+    // switch (symbol) {
+    //     case "+":
+    //     count = Number(firstNumber) + Number(secondNumber);
+    //     break;
+    //     case "-":
+    //     count = Number(firstNumber) - Number(secondNumber);
+    //     break;
+    //     case "*":
+    //     count = Number(firstNumber) * Number(secondNumber);
+    //     break;
+    //     case "/":
+    //     count = Number(firstNumber) / Number(secondNumber);
+    //     break;
+    // }
+    const symbols = {
+        "+" : Number(firstNumber) + Number(secondNumber),
+        "-" : Number(firstNumber) - Number(secondNumber),
+        "*" : Number(firstNumber) * Number(secondNumber),
+        "/" : Number(firstNumber) / Number(secondNumber),
+    };
+    for (let key in symbols) {
+        key == symbol ? count = symbols[key]: null;
     }
     outputResult();
 }
 //Функция вывода
 function outputResult () {
-    a.value && b.value && operator.value != "" ? result.innerHTML = count: result.innerHTML = "";
+    a.value && b.value && operator.value != "" ? result.innerHTML = count.toFixed(12): result.innerHTML = "";
 }
